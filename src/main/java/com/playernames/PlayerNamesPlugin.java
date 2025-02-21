@@ -7,7 +7,7 @@ import net.runelite.api.Player;
 import net.runelite.api.WorldType;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.widgets.Widget;
-import net.runelite.api.widgets.WidgetInfo;
+import net.runelite.api.widgets.ComponentID;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
@@ -77,7 +77,7 @@ public class PlayerNamesPlugin extends Plugin
             return 0;
         }
 
-        Widget wildernessWidget = client.getWidget(WidgetInfo.PVP_WILDERNESS_LEVEL);
+        Widget wildernessWidget = client.getWidget(ComponentID.PVP_WILDERNESS_LEVEL);
         if (wildernessWidget != null && !wildernessWidget.isHidden()) {
             String text = wildernessWidget.getText(); // e.g., "Level: 21<br>6-48"
             try {
