@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PlayerNamesPluginTest",
+            "request": "launch",
+            "mainClass": "com.playernames.PlayerNamesPluginTest",
+            "args": [
+                "--debug",
+                "--developer-mode"
+            ],
+            "vmArgs": [
+                "-ea"
+            ]
+        }
+    ]
+}
