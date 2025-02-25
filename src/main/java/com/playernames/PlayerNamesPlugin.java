@@ -110,13 +110,13 @@ public class PlayerNamesPlugin extends Plugin
             return config.safeColor();
         }
 
-        if (targetCombatLevel >= minAttackable && targetCombatLevel <= maxAttackable) {
-            return config.dangerousColor();
-        }
-
         int levelDiff = Math.abs(localCombatLevel - targetCombatLevel);
         if (levelDiff <= 5 && (targetCombatLevel < minAttackable || targetCombatLevel > maxAttackable)) {
             return config.potentialThreatColor();
+        }
+
+        if (targetCombatLevel >= minAttackable && targetCombatLevel <= maxAttackable) {
+            return config.dangerousColor();
         }
 
         return config.safeColor();
